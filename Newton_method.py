@@ -1,11 +1,11 @@
 import math
 
 def f(x):
-    return math.exp(x) + 2**(-x) - 2*math.cos(x) - 6
+    return math.exp(x) + 2**(-x) + 2*math.cos(x) - 6
 
 # derivative calc
 def fprime(x):
-    return math.exp(x) + math.log(2) * 2**(-x) + 2*math.sin(x)
+    return math.exp(x) - 2**(-x)*math.log(2)  - 2*math.sin(x)
 
 def newtmethod(p0,TOL,n0):
     i = 1
